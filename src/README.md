@@ -2,6 +2,10 @@
 
 Aplicação web de Pokédex desenvolvida com Next.js utilizando o App Router. O projeto consome a PokéAPI e apresenta informações detalhadas sobre Pokémons, Moves, Items e Berries, com foco em performance, organização de código e experiência do usuário.
 
+## Deploy
+
+https://pokedex-7apotkp56-paulonovoadevs-projects.vercel.app/
+
 ## Funcionalidades
 
 - Busca global com sugestões em tempo real
@@ -44,9 +48,6 @@ https://pokeapi.co/
 - Implementação de debounce na busca para reduzir chamadas desnecessárias
 - Paginação baseada em searchParams
 
-## Deploy
-
-Recomendado utilizar a Vercel para deploy da aplicação.
 
 ## Autor
 
