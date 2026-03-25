@@ -8,7 +8,7 @@ import { ArrowLeftIcon, ArrowRightIcon } from "lucide-react"
 export const revalidate = 86400
 
 const POKEMON_PAGE_SIZE = 30
-const POKEMON_MAX_PAGE = 44 // 1302 pokémons / 30 por página
+const POKEMON_MAX_PAGE = 44 
 
 async function PokemonList({ page }: { page: number }) {
   const offset = (page - 1) * POKEMON_PAGE_SIZE

@@ -14,10 +14,14 @@ export default function GlobalError({
   }, [error]);
 {
   return (
-    <div>
+    <html>
+      <body>
+    <div className="font-extrabold">
       <h2>Algo deu errado!</h2>
       <button onClick={() => reset()}>Tente novamente</button>
     </div>
+    </body>
+    </html>
   )
 };
 }

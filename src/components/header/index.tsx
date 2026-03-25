@@ -1,5 +1,5 @@
 import Link from "next/link";
-import SearchBar from "../searchbar/SearchBar";
+import SearchBar from "../../app/search/SearchBar";
 import { Button } from "../ui/button";
 
 export function Header() {
