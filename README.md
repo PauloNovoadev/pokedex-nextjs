@@ -4,7 +4,7 @@ Aplicação web de Pokédex desenvolvida com Next.js utilizando o App Router. O 
 
 ## Deploy
 
-https://pokedex-7apotkp56-paulonovoadevs-projects.vercel.app/
+https://pokedex-nextjs-seven-dun.vercel.app/
 
 ## Funcionalidades
 
