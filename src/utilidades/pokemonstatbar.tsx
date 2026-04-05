@@ -21,7 +21,7 @@ export function StatBar({ label, value, max = 150 }: StatBarProps) {
 
   return (
     <div className="space-y-1">
-      <div className="flex justify-between text-sm font-bold text-zinc-800">
+      <div className="flex justify-between text-sm font-bold text-zinc-800 dark:text-white">
         <span>{label}</span>
         <span>{value}</span>
       </div>

@@ -54,8 +54,8 @@ export default async function ItemDetailPage({
   return (
     <div className="min-h-screen px-4 py-8">
       
-      <div className="mx-auto max-w-5xl rounded-2xl border-8 border-blue-300 bg-gradient-to-r from-blue-50 to-yellow-50 p-6 shadow-xl">
-        <h1 className="mb-8 text-center text-4xl font-black text-zinc-900">
+      <div className="mx-auto max-w-5xl rounded-2xl border-8 border-blue-300 bg-gradient-to-r from-blue-50 to-yellow-50 dark:bg-gradient-to-r dark:from-sky-950 dark:to-yellow-950 p-6 shadow-xl">
+        <h1 className="mb-8 text-center text-4xl font-black text-zinc-900 dark:text-white">
           <nav className="mt-4 flex w-full items-center justify-between">
           {item.id > 1 && (
        <Link 
@@ -88,33 +88,33 @@ export default async function ItemDetailPage({
             )}
           </div>
 
-          <Card className="border-2 border-yellow-300 bg-zinc-200">
+          <Card className="border-2 border-yellow-300 bg-zinc-200 dark:bg-gray-700">
             <CardHeader>
             </CardHeader>
-            <CardTitle className="flex items-center justify-center font-extrabold"> Item data </CardTitle>
+            <CardTitle className="flex items-center justify-center font-extrabold dark:text-white"> Item data </CardTitle>
 
-            <CardContent className="space-y-4 text-sm text-zinc-700">
+            <CardContent className="space-y-4 text-sm text-zinc-700 dark:text-white">
               <div>
-                <p className="font-medium text-zinc-500">Descrição</p>
-                <p className="mt-1 text-zinc-900">{item.description}</p>
+                <p className="font-medium text-zinc-500 dark:text-white">Descrição</p>
+                <p className="mt-1 text-zinc-900 dark:text-white">{item.description}</p>
               </div>
 
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <p className="font-medium text-zinc-500">Cost</p>
-                  <p className="text-zinc-900">{item.cost ?? "—"}</p>
+                  <p className="font-medium text-zinc-500 dark:text-white">Cost</p>
+                  <p className="text-zinc-900 dark:text-white">{item.cost ?? "—"}</p>
                 </div>
 
                 <div>
-                  <p className="font-medium text-zinc-500">Categoria</p>
-                  <p className="text-zinc-900">
+                  <p className="font-medium text-zinc-500 dark:text-white">Categoria</p>
+                  <p className="text-zinc-900 dark:text-white">
                     {item.category?.name ? nameFmt(item.category.name) : "—"}
                   </p>
                 </div>
 
                 <div className="col-span-2">
-                  <p className="font-medium text-zinc-500">Effect</p>
-                  <p className="text-zinc-900">{item.effect}</p>
+                  <p className="font-medium text-zinc-500 dark:text-white">Effect</p>
+                  <p className="text-zinc-900 dark:text-white">{item.effect}</p>
                 </div>              
               </div>
             </CardContent>

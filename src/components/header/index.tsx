@@ -1,10 +1,13 @@
 import Link from "next/link";
 import SearchBar from "../../app/search/SearchBar";
 import { Button } from "../ui/button";
+import { ThemeSwitch } from "../dark theme/switchers";
+import { Label } from "radix-ui";
+import TestSwitch from "@/testes/testswitch";
 
 export function Header() {
   return (
-    <header className="relative z-50 mx-auto mt-6 w-[95%] max-w-4x4 rounded-2xl border border-white/30 bg-red-500/95 px-6 py-5 text-white shadow-lg backdrop-blur-sm">
+    <header className="relative z-50 mx-auto mt-6 w-[95%] max-w-4x4 rounded-2xl border border-white/30 bg-red-500/95 dark:bg-red-800 px-6 py-5 text-white shadow-lg backdrop-blur-sm">
       <div className="flex flex-col items-center gap-4">
         <Link
           href="/"
@@ -17,18 +20,23 @@ export function Header() {
           <nav>
             <ul className="flex items-center gap-2 text-sm font-extrabold md:text-base">
 
+              <div className="flex items-center space-x-2">
+                <Label.Root htmlFor="airplane-mode">Tema Escuro</Label.Root>
+              <ThemeSwitch/>
+              </div>
+
               <li>
                 <Button asChild variant="default" size="sm">
                   <Link href="/items">ITEMS</Link>
                 </Button>
               </li>
-
+              
               <li>
                 <Button asChild variant="default" size="sm">
                   <Link href="/berries">BERRIES</Link>
                 </Button>
               </li>
-
+  
               <li>
                 <Button asChild variant="default" size="sm">
                   <Link href="/moves">MOVES</Link>
@@ -41,6 +49,11 @@ export function Header() {
           <div className="w-full max-w-xs md:max-w-sm">
             <SearchBar />
           </div>
+          <div>
+            <Button asChild variant="default" size="sm" className="bg-green-800 transition hover:bg-green-950">
+            <Link href={"/teambuilder"}>TEAM BUILDER</Link>
+            </Button>
+          </div>  
         </div>
       </div>
     </header>

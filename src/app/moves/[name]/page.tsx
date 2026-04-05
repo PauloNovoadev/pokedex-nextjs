@@ -59,7 +59,7 @@ function getDamageClassIcon(damageClass?: string) {
 
   return (
     <div className="min-h-screen px- py-8">
-    <div className="mx-auto w-full max-w-6xl rounded-lg border-4 border-blue-700 bg-white p-6">
+    <div className="mx-auto w-full max-w-6xl rounded-lg border-4 border-blue-700 bg-white dark:bg-gray-700 p-6">
       <nav className="mt-4 flex w-full items-center justify-between">
           {move.id > 1 && (
        <Link 
@@ -78,36 +78,36 @@ function getDamageClassIcon(damageClass?: string) {
   </Link>
 </nav>
       <div>
-        <p className="flex items-center justify-center font-bold space-y-6 text-4xl text-zinc-900">{nameFmt(move.name)}</p>
+        <p className="flex items-center justify-center font-bold space-y-6 text-4xl text-zinc-900 dark:text-white">{nameFmt(move.name)}</p>
         <div className="border-t border-zinc-300 my-4" />
-  
+        <div className="text-zinc-900 dark:text-white">
         <p>{flavor_text_entries?.flavor_text ?? "Sem descrição disponível."}</p>
-  
+  </div>
       </div>
       <div className="mt-4">
-        <Card className="w-full border-4 border-yellow-500">    
+        <Card className="w-full border-4 border-yellow-500 dark:bg-gray-700">    
       <CardContent className="space-y-6 text-sm text-zinc-700">
-  <CardTitle className="font-bold text-zinc-700 flex items-center justify-center">Informações</CardTitle>
+  <CardTitle className="font-bold text-zinc-700 dark:text-white flex items-center justify-center">Informações</CardTitle>
   <div className="border-t border-zinc-300 my-4" />
   <div className="grid gap-8 md:grid-cols-[1fr_320px]">
     <div className="space-y-6">
       
       <div>
-        <p className="font-bold text-zinc-500">Efeito</p>
-        <p className="mt-2 font-bold text-zinc-700">
+        <p className="font-bold text-zinc-500 dark:text-white">Efeito</p>
+        <p className="mt-2 font-bold text-zinc-700 dark:text-white">
           {effectEntry?.effect ?? "Sem descrição disponível."}
         </p>
         <div className="border-t border-zinc-200 pt-4">
-        <p className="font-bold text-zinc-500">Target</p>
-        <p className="mt-2 font-bold text-zinc-700">{nameFmt(move.target?.name ?? "—")}</p>
+        <p className="font-bold text-zinc-500 dark:text-white">Target</p>
+        <p className="mt-2 font-bold text-zinc-700 dark:text-white">{nameFmt(move.target?.name ?? "—")}</p>
       </div>
         <div className="border-t border-zinc-300 my-4" />
       </div>
     </div>
-    <div className="rounded-lg border-2 border-zinc-500 bg-gradient-to-r from-yellow-50 to-blue-50 p-4">
+    <div className="rounded-lg border-2 border-zinc-500 bg-gradient-to-r from-yellow-50 to-blue-50 dark:bg-gradient-to-r dark:from-sky-950 dark:to-yellow-950 p-4">
       <div className="grid grid-cols-2 gap-x-6 gap-y-4">
         <div>
-          <p className="font-medium text-zinc-500">Tipo</p>
+          <p className="font-medium text-zinc-500 dark:text-white">Tipo</p>
           <div className="mt-1 flex flex-wrap gap-2">
             {move.type?.name ? (
               <span
@@ -123,7 +123,7 @@ function getDamageClassIcon(damageClass?: string) {
           </div>
         </div>
         <div>
-          <p className="font-medium text-zinc-500">Categoria</p>
+          <p className="font-medium text-zinc-500 dark:text-white">Categoria</p>
           <div className="mt-1 flex items-center gap-2">
             {move.damage_class?.name ? (() => {
               const icon = getDamageClassIcon(move.damage_class.name)
@@ -135,32 +135,32 @@ function getDamageClassIcon(damageClass?: string) {
                   className="h-8 w-8 object-contain"
                 />
               ) : (
-                <span className="text-zinc-500">—</span>
+                <span className="text-zinc-500 dark:text-white">—</span>
               )
             })() : (
-              <span className="text-zinc-500">—</span>
+              <span className="text-zinc-500 dark:text-white">—</span>
             )}
           </div>
         </div>
 
         <div>
-          <p className="font-medium text-zinc-500">Power</p>
-          <p className="font-bold text-zinc-800">{move.power ?? "—"}</p>
+          <p className="font-medium text-zinc-500 dark:text-white">Power</p>
+          <p className="font-bold text-zinc-800 dark:text-white">{move.power ?? "—"}</p>
         </div>
 
         <div>
-          <p className="font-medium text-zinc-500">Accuracy</p>
-          <p className="font-bold text-zinc-800">{move.accuracy ?? "—"}</p>
+          <p className="font-medium text-zinc-500 dark:text-white">Accuracy</p>
+          <p className="font-bold text-zinc-800 dark:text-white">{move.accuracy ?? "—"}</p>
         </div>
 
         <div>
-          <p className="font-medium text-zinc-500">PP</p>
-          <p className="font-bold text-zinc-800">{move.pp ?? "—"}</p>
+          <p className="font-medium text-zinc-500 dark:text-white">PP</p>
+          <p className="font-bold text-zinc-800 dark:text-white">{move.pp ?? "—"}</p>
         </div>
 
         <div>
-          <p className="font-medium text-zinc-500">Priority</p>
-          <p className="font-bold text-zinc-800">{move.priority ?? "—"}</p>
+          <p className="font-medium text-zinc-500 dark:text-white">Priority</p>
+          <p className="font-bold text-zinc-800 dark:text-white">{move.priority ?? "—"}</p>
         </div>
       </div>
     </div>

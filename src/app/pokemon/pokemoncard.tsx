@@ -37,7 +37,7 @@ export function PokemonCard({
       className={mainTheme.card}
       imageClassName={mainTheme.imageBg}
     >
-      <div className="absolute right-3 top-3 z-20 rounded-full bg-white/90 px-2 py-1 text-xs font-extrabold text-zinc-700 shadow-sm">
+      <div className="absolute right-3 top-3 z-20 rounded-full bg-white/90 dark:bg-gray-700 dark:text-white px-2 py-1 text-xs font-extrabold text-zinc-700 shadow-sm">
         #{String(id).padStart(3, "0")}
       </div>
 

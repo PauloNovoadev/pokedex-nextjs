@@ -48,23 +48,23 @@ export function MovesTable({ moves }: MovesTableProps) {
     <div className="overflow-x-auto rounded-md border border-zinc-300 bg-white">
       <Table>
         <TableHeader>
-          <TableRow className="border-b border-zinc-300 bg-[#d9d7cf] hover:bg-[#d9d7cf]">
-            <TableHead className="h-10 px-4 text-left text-sm font-bold text-zinc-800">
+          <TableRow className="border-b border-zinc-300 bg-[#d9d7cf] hover:bg-[#d9d7cf] dark:bg-gray-700">
+            <TableHead className="h-10 px-4 text-left text-sm font-bold text-zinc-800 dark:text-white">
               Nome
             </TableHead>
-            <TableHead className="h-10 px-4 text-center text-sm font-bold text-zinc-800">
+            <TableHead className="h-10 px-4 text-center text-sm font-bold text-zinc-800 dark:text-white">
               Tipo
             </TableHead>
-            <TableHead className="h-10 px-4 text-center text-sm font-bold text-zinc-800">
+            <TableHead className="h-10 px-4 text-center text-sm font-bold text-zinc-800 dark:text-white">
               Cat.
             </TableHead>
-            <TableHead className="h-10 px-4 text-center text-sm font-bold text-zinc-800">
+            <TableHead className="h-10 px-4 text-center text-sm font-bold text-zinc-800 dark:text-white">
               Poder
             </TableHead>
-            <TableHead className="h-10 px-4 text-center text-sm font-bold text-zinc-800">
+            <TableHead className="h-10 px-4 text-center text-sm font-bold text-zinc-800 dark:text-white">
               Acc.
             </TableHead>
-            <TableHead className="h-10 px-4 text-center text-sm font-bold text-zinc-800">
+            <TableHead className="h-10 px-4 text-center text-sm font-bold text-zinc-800 dark:text-white">
               PP
             </TableHead>
           </TableRow>
@@ -79,9 +79,9 @@ export function MovesTable({ moves }: MovesTableProps) {
             return (
               <TableRow
                 key={move.name}
-                className="border-b border-zinc-100 bg-white hover:bg-yellow-100"
+                className="border-b border-zinc-100 bg-white hover:bg-yellow-100 dark:bg-sky-900 dark:hover:bg-gray-600"
               >
-                <TableCell className="px-4 py-2 text-sm font-semibold text-blue-900">
+                <TableCell className="px-4 py-2 text-sm font-semibold text-blue-900 dark:text-white">
                   <Link
                     href={`/moves/${move.name}`}
                     className="hover:text-red-700 hover:underline"
@@ -108,15 +108,15 @@ export function MovesTable({ moves }: MovesTableProps) {
                   )}
                 </TableCell>
 
-                <TableCell className="px-4 py-2 text-center text-sm text-zinc-700 font-extrabold">
+                <TableCell className="px-4 py-2 text-center text-sm text-zinc-700 font-extrabold dark:text-white">
                   {move.power ?? "—"}
                 </TableCell>
 
-                <TableCell className="px-4 py-2 text-center text-sm text-zinc-700 font-extrabold">
+                <TableCell className="px-4 py-2 text-center text-sm text-zinc-700 font-extrabold dark:text-white">
                   {move.accuracy ?? "—"}
                 </TableCell>
 
-                <TableCell className="px-4 py-2 text-center text-sm text-zinc-700 font-extrabold">
+                <TableCell className="px-4 py-2 text-center text-sm text-zinc-700 font-extrabold dark:text-white">
                   {move.pp ?? "—"}
                 </TableCell>
               </TableRow>

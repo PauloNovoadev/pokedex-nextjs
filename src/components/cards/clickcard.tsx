@@ -36,7 +36,7 @@ export function ClickableCard({
     <Link href={href} className="group block w-full">
       <Card
         className={cn(
-          "overflow-hidden rounded-2xl bg-white pt-0 transition duration-200 hover:-translate-y-1 hover:shadow-lg",
+          "overflow-hidden rounded-2xl bg-white dark:bg-gray-700 dark:text-white pt-0 transition duration-200 hover:-translate-y-1 hover:shadow-lg",
           className
         )}
       >
@@ -59,8 +59,8 @@ export function ClickableCard({
           />
         </div>
 
-        <CardHeader className={cn("gap-1 bg-white px-4 py-3 text-center", headerClassName)}>
-          <CardTitle className={cn("font-semibold text-zinc-800", titleClassName)}>
+        <CardHeader className={cn("gap-1 bg-white dark:bg-gray-700 px-4 py-3 text-center", headerClassName)}>
+          <CardTitle className={cn("font-semibold text-zinc-800 dark:text-white", titleClassName)}>
             {title}
           </CardTitle>
 

@@ -115,7 +115,7 @@ export default async function PokemonDetailPage({
           </Link>
           </nav>
       
-      <div className="mx-auto max-w-5xl rounded-2xl border border-zinc-300 bg-white p-6 shadow-xl">
+      <div className="mx-auto max-w-5xl rounded-2xl border border-zinc-300 bg-white dark:bg-gray-700 p-6 shadow-xl">
         <nav className="mt-4 flex w-full items-center justify-between">
           {pokemon.id > 1 && (
        <Link 
@@ -133,7 +133,7 @@ export default async function PokemonDetailPage({
     <ArrowRightIcon className="h-4 w-4" />
   </Link>
 </nav>
-        <h1 className="mb-8 text-center text-4xl font-black text-zinc-900">
+        <h1 className="mb-8 text-center text-4xl font-black text-zinc-900 dark:text-white">
           {nameFmt(pokemon.name)}
         </h1>
          <div className="border-t border-zinc-300 my-2" />
@@ -149,21 +149,21 @@ export default async function PokemonDetailPage({
             )}
           </div>
 
-          <Card>
+          <Card className="dark:text-white">
             <CardHeader>
               <CardTitle>Pokédex data</CardTitle>
             </CardHeader>
 
-            <CardContent className="space-y-4 text-sm text-zinc-700">
+            <CardContent className="space-y-4 text-sm text-zinc-700 dark:text-white">
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <p className="font-medium text-zinc-500">ID</p>
-                  <p className="text-zinc-900">
+                  <p className="font-medium text-zinc-500 dark:text-white">ID</p>
+                  <p className="text-zinc-900 dark:text-white">
                     #{String(pokemon.id).padStart(3, "0")}
                   </p>
                 </div>
                 <div>
-                  <p className="font-medium text-zinc-500">Tipo</p>
+                  <p className="font-medium text-zinc-500 dark:text-white">Tipo</p>
                   <div className="mt-1 flex flex-wrap gap-2">
                     {(pokemon.types ?? []).map((t: any) => {
                       const theme = pokemonTypeTheme[t.type.name] ?? fallbackTheme
@@ -180,21 +180,21 @@ export default async function PokemonDetailPage({
                   </div>
                 </div>
                 <div>
-                  <p className="font-medium text-zinc-500">Height</p>
+                  <p className="font-medium text-zinc-500 dark:text-white">Height</p>
                   <p className="text-zinc-900">{pokemon.height}</p>
                 </div>
                 <div>
-                  <p className="font-medium text-zinc-500">Weight</p>
+                  <p className="font-medium text-zinc-500 dark:text-white">Weight</p>
                   <p className="text-zinc-900">{pokemon.weight}</p>
                 </div>
               </div>
               <div>
-                <p className="font-medium text-zinc-500">Abilities</p>
+                <p className="font-medium text-zinc-500 dark:text-white">Abilities</p>
                 <div className="mt-2 flex flex-wrap gap-2">
                   {(pokemon.abilities ?? []).map((a: any) => (
                     <span
                       key={a.ability.name}
-                      className="rounded-sm bg-gradient-to-r from-blue-100 to-yellow-100 px-3 py-1 text-xs font-semibold text-zinc-700"
+                      className="rounded-sm bg-gradient-to-r from-blue-100 to-yellow-100 px-3 py-1 text-xs font-semibold text-zinc-700 dark:bg-gradient-to-r dark:from-sky-950 dark:to-yellow-950 dark:text-white"
                     >
                       {nameFmt(a.ability.name)}
                     </span>
@@ -206,7 +206,7 @@ export default async function PokemonDetailPage({
         </div>
  <div className="border-t border-zinc-300 my-2" />
         <div className="mt-10">
-          <h2 className="mb-4 text-center text-2xl font-black text-zinc-900">
+          <h2 className="mb-4 text-center text-2xl font-black text-zinc-900 dark:text-white">
             Linha evolutiva
           </h2>
 
@@ -225,12 +225,12 @@ export default async function PokemonDetailPage({
                       <div className="h-20 w-20" />
                     )}
 
-                    <p className="mt-2 text-center text-sm font-semibold text-zinc-800">
+                    <p className="mt-2 text-center text-sm font-semibold text-zinc-800 dark:text-white">
                       {nameFmt(poke.name)}
                     </p>
 
                     {poke.id ? (
-                      <p className="text-xs text-zinc-500">
+                      <p className="text-xs text-zinc-500 dark:text-white">
                         #{String(poke.id).padStart(3, "0")}
                       </p>
                     ) : null}
@@ -246,7 +246,7 @@ export default async function PokemonDetailPage({
         </div>
  <div className="border-t border-zinc-300 my-2" />
         <div className="mt-10">
-          <h2 className="mb-4 text-2xl font-black text-zinc-900">
+          <h2 className="mb-4 text-2xl font-black text-zinc-900 dark:text-white">
             Base stats
           </h2>
 

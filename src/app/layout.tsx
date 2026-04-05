@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Header } from "@/components/header";
+import { Providers } from "@/components/dark theme/themeprovider";
 
 export const metadata: Metadata = {
   title: "Pokedex",
@@ -13,22 +14,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className="antialiased">
-        <main className="relative min-h-screen overflow-visible bg-zinc-100">
-          <div className="pointer-events-none absolute inset-0 z-0">
-            <div
-              className="absolute inset-0 bg-repeat opacity-20 [background-size:420px]"
-              style={{ backgroundImage: "url('/pokeballsbg.png')" }}
-            />
-            <div className="absolute inset-0 bg-white/10" />
-          </div>
-
-          <div className="relative z-10">
-            <Header />
-            <div className="mx-auto max-w-7xl px-4 py-8">{children}</div>
-          </div>
-        </main>
+        <Providers>
+          <main className="site-background relative min-h-screen overflow-visible">
+            <div className="pointer-events-none absolute inset-0 z-0 backdrop-blur-[2px]" />
+            <div className="relative z-10">
+              <Header />
+              <div className="mx-auto max-w-7xl px-4 py-8">
+                {children}
+              </div>
+            </div>
+          </main>
+        </Providers>
       </body>
     </html>
   );

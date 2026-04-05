@@ -52,8 +52,8 @@ const berryItem = await getBerryItem(berry.item.name)
    return (
     <div className="min-h-screen px-4 py-8">
       
-      <div className="mx-auto max-w-5xl rounded-2xl border-8 border-blue-300 bg-gradient-to-r from-blue-50 to-yellow-50  p-6 shadow-xl">
-        <h1 className="mb-8 text-center text-4xl font-black text-zinc-900">
+      <div className="mx-auto max-w-5xl rounded-2xl border-8 border-blue-300 bg-gradient-to-r from-blue-50 to-yellow-50 dark:bg-gradient-to-r dark:from-sky-950 dark:to-yellow-950   p-6 shadow-xl">
+        <h1 className="mb-8 text-center text-4xl font-black text-zinc-900 dark:text-white">
           <nav className="mt-4 flex w-full items-center justify-between">
           {berry.id > 1 && (
        <Link 
@@ -89,44 +89,44 @@ const berryItem = await getBerryItem(berry.item.name)
 
           <Card>
             <CardHeader>
-              <CardTitle className="font-high text-zinc-700 font-bold">Berry info</CardTitle>
+              <CardTitle className="font-high text-zinc-700 font-bold dark:text-white">Berry info</CardTitle>
             </CardHeader>
 
-            <CardContent className="space-y-4 text-sm text-zinc-700">
+            <CardContent className="space-y-4 text-sm text-zinc-700 dark:text-white">
               <div>
-                <p className="font-medium text-zinc-500">Descrição</p>
-                <p className="mt-1 text-zinc-900">{description}</p>
+                <p className="font-medium text-zinc-500 dark:text-white">Descrição</p>
+                <p className="mt-1 text-zinc-900 dark:text-white">{description}</p>
               </div>
 
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <p className="font-medium text-zinc-500">Growth time</p>
-                  <p className="text-zinc-900">{berry.growth_time}</p>
+                  <p className="font-medium text-zinc-500 dark:text-white">Growth time</p>
+                  <p className="text-zinc-900 dark:text-white">{berry.growth_time}</p>
                 </div>
 
                 <div>
-                  <p className="font-medium text-zinc-500">Max harvest</p>
-                  <p className="text-zinc-900">{berry.max_harvest}</p>
+                  <p className="font-medium text-zinc-500 dark:text-white">Max harvest</p>
+                  <p className="text-zinc-900 dark:text-white">{berry.max_harvest}</p>
                 </div>
 
                 <div>
-                  <p className="font-medium text-zinc-500">Size</p>
-                  <p className="text-zinc-900">{berry.size}</p>
+                  <p className="font-medium text-zinc-500 dark:text-white">Size</p>
+                  <p className="text-zinc-900 dark:text-white">{berry.size}</p>
                 </div>
 
                 <div>
-                  <p className="font-medium text-zinc-500">Smoothness</p>
-                  <p className="text-zinc-900">{berry.smoothness}</p>
+                  <p className="font-medium text-zinc-500 dark:text-white">Smoothness</p>
+                  <p className="text-zinc-900 dark:text-white">{berry.smoothness}</p>
                 </div>
 
                 <div>
-                  <p className="font-medium text-zinc-500">Soil dryness</p>
-                  <p className="text-zinc-900">{berry.soil_dryness}</p>
+                  <p className="font-medium text-zinc-500 dark:text-white">Soil dryness</p>
+                  <p className="text-zinc-900 dark:text-white">{berry.soil_dryness}</p>
                 </div>
 
                 <div>
-                  <p className="font-medium text-zinc-500">Firmness</p>
-                  <p className="text-zinc-900">
+                  <p className="font-medium text-zinc-500 dark:text-white">Firmness</p>
+                  <p className="text-zinc-900 dark:text-white">
                     {nameFmt(berry.firmness?.name ?? "")}
                   </p>
                 </div>
