@@ -225,9 +225,11 @@ export default async function PokemonDetailPage({
                       <div className="h-20 w-20" />
                     )}
 
+                    <Link href={`/pokemon/${poke.id}`} >
                     <p className="mt-2 text-center text-sm font-semibold text-zinc-800 dark:text-white">
                       {nameFmt(poke.name)}
                     </p>
+                    </Link>
 
                     {poke.id ? (
                       <p className="text-xs text-zinc-500 dark:text-white">
